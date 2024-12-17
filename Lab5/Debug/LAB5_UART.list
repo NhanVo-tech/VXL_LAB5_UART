@@ -324,7 +324,6 @@ int main(void)
  80002b0:	2000      	movs	r0, #0
  80002b2:	f000 f97f 	bl	80005b4 <setTimer>
 	  	  }
-	  	  // If received byte, call command_parser_fsm function
 	  	  if (buffer_flag == 1) {
  80002b6:	4b14      	ldr	r3, [pc, #80]	; (8000308 <main+0xa4>)
  80002b8:	781b      	ldrb	r3, [r3, #0]
@@ -337,7 +336,6 @@ int main(void)
  80002c4:	2200      	movs	r2, #0
  80002c6:	701a      	strb	r2, [r3, #0]
 	  	  }
-	  	  // uart_communiation_fsm function
 	  	  uart_communiation_fsm(hadc1, huart2);
  80002c8:	4e10      	ldr	r6, [pc, #64]	; (800030c <main+0xa8>)
  80002ca:	4a0c      	ldr	r2, [pc, #48]	; (80002fc <main+0x98>)

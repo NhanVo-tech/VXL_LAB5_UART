@@ -119,12 +119,10 @@ int main(void)
 	  		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 	  		  setTimer(0, 1000);
 	  	  }
-	  	  // If received byte, call command_parser_fsm function
 	  	  if (buffer_flag == 1) {
 	  		  command_parser_fsm();
 	  		  buffer_flag = 0;
 	  	  }
-	  	  // uart_communiation_fsm function
 	  	  uart_communiation_fsm(hadc1, huart2);
     /* USER CODE BEGIN 3 */
   }
